@@ -5,6 +5,20 @@ using namespace std;
 void solve()
 {
     // Add your solution here
+    int a, b, ans = 0;
+    cin >> a >> b;
+    do
+    {
+        ans++;
+        a = a * 3;
+        b = b * 2;
+    } while (a < b);
+    if (a == b)
+    {
+        ans++;
+    }
+
+    cout << ans;
 }
 
 int main()
@@ -14,9 +28,6 @@ int main()
     cout.tie(0);
     int tc = 1;
     // cin >> tc;
-    // aqui va el arreglo
-    long long arr[7] = {1, 2, 3, 4, 5, 6};
-
     for (int t = 1; t <= tc; t++)
     {
         // cout << "Case #" << t << ": ";

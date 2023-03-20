@@ -5,8 +5,16 @@ using namespace std;
 void solve()
 {
     // Add your solution here
-
-    cout << "hello world" << endl;
+    int k, n, w, ans = 0;
+    cin >> k >> n >> w;
+    for (int i = 1; i <= w; i++)
+    {
+        ans += (i * k);
+    }
+    if (ans <= n)
+        cout << 0;
+    else
+        cout << ans - n;
 }
 
 int main()
