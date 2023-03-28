@@ -5,8 +5,7 @@ using namespace std;
 void solve()
 {
     // Add your solution here
-    int flag = 0;
-    int matrix[5][5];
+    int matrix[5][5], ans = 0;
     for (int i = 0; i < 5; i++)
     {
         for (int j = 0; j < 5; j++)
@@ -14,11 +13,18 @@ void solve()
             cin >> matrix[i][j];
             if (matrix[i][j] == 1)
             {
-                flag = j;
+                if (i > 2)
+                    ans += i - 2;
+                else if (i < 2)
+                    ans += i + 2;
+                if (j > 2)
+                    ans += i - 2;
+                else if (j < 2)
+                    ans += i + 2;
             }
         }
     }
-    cout << flag << endl;
+    cout << ans + 1 << endl;
 }
 
 int main()
